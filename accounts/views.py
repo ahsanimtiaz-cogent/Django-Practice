@@ -9,16 +9,16 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 
 
-class RegisterView(CreateAPIView):
+class RegisterAPIView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
 
 
-class UserListView(ListAPIView):
+class UserListAPIView(ListAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
 
 
-class UserDetailView(RetrieveUpdateDestroyAPIView):
+class UserDetailAPIView(RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
